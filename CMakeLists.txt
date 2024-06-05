@@ -21,7 +21,7 @@ HunterGate(
     SHA1 "8010d63d5ae611c564889d5fe12d3cb7a45703ac"
 )
 
-project(SqliteModernCpp)
+project(SQLiteModernCpp LANGUAGES CXX)
 
 hunter_add_package(sqlite3)
 find_package(sqlite3 CONFIG REQUIRED)
@@ -57,7 +57,7 @@ endif()
 # Place the file in the source directory, permitting us to place a single configuration file for YCM there.
 # YCM is the code-completion engine for (neo)vim https://github.com/Valloric/YouCompleteMe
 IF(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
-  EXECUTE_PROCESS( COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    EXECUTE_PROCESS(COMMAND ${CMAKE_COMMAND} -E copy_if_different
     ${CMAKE_BINARY_DIR}/compile_commands.json
     ${CMAKE_SOURCE_DIR}/compile_commands.json
   )
