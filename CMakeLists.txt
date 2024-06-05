@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 set(HUNTER_TLS_VERIFY ON)
+
+option(HUNTER_ENABLED "Enable Hunter package manager support" ON)
+
 include("cmake/HunterGate.cmake")
 include("cmake/Catch.cmake")
 
